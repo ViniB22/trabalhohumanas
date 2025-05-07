@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, #ffc8de, white);
+    font-family: 'Playfair Display', cursive;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    height: 120px;
+    background: url('./blabla.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
+}
+
+header h1 {
+    color: #fff;
+    text-shadow: 2px 2px 4px palevioletred;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.container {
+  width: 450px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(255, 182, 193, 0.2);
+  border: 1px solid #ffb6e6;
+  text-align: justify;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./teste.jpg') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(255, 182, 193, 0.4);
+}
+
+.container_mais {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container_menos {
+    width: 170px;
+    background: #fff2f7;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid rgb(255, 193, 214);
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.1);
+    word-wrap: break-word;
+}
+/* Elementos extras coquette */
+.coracao {
+    position: fixed;
+    font-size: 1.5rem;
+    color: palevioletred;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
